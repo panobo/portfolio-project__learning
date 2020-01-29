@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+{% load staticfiles %}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -43,16 +44,16 @@
   <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Panobo's Testing Page</a>
+      <a class="navbar-brand" href="{% url 'home' %}">Panobo's Testing Page</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
               aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="#">Twitter</a>
-          <a class="nav-item nav-link" href="#">Resume</a>
-          <a class="nav-item nav-link" href="#">Blog</a>
+          <a class="nav-item nav-link" href="http://twitter.com/nickchuckwalter">Twitter</a>
+          <a class="nav-item nav-link" href="{% static 'django_reference_sheet.pdf' %}">Resume</a>
+          <a class="nav-item nav-link" href="allblogs">Blog</a>
         </div>
       </div>
     </nav>
@@ -67,6 +68,7 @@
       <p>
         <a href="mailto:pavlis.1@seznam.cz" class="btn btn-primary my-2">Email Me</a>
       </p>
+      <img src="{% static 'coffee2.jpg' %}" height="150" />
     </div>
   </section>
 
